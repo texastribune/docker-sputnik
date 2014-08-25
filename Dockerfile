@@ -17,6 +17,8 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/teradek-sputnik.deb
 # ADD /etc/sputnik.conf
 # TODO update the default conf to log to /data/log instead
 VOLUME ["/var/log/"]
+# TODO
+# VOLUME ["/opt/teradek/sputnik/upload"]
 
 # listening
 EXPOSE 5111
