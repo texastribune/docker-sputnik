@@ -8,6 +8,9 @@ run: clean
 shell:
 	docker run --rm -i -t --name debug texastribune/sputnik /bin/bash
 
+debug:
+	docker run --rm -i -t --name debug --volumes-from sputnik ubuntu
+
 conf: run
 	docker cp sputnik:/data/conf .
 	docker stop sputnik
