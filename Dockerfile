@@ -3,8 +3,7 @@
 # Docs:
 # http://cdn.teradek.com/Public/Sputnik/Docs/Teradek_Sputnik_Setup_Guide_v2_0512.pdf
 
-# latest ubuntu (also a LTS)
-FROM ubuntu:14.04
+FROM debian:squeeze
 MAINTAINER tech@texastribune.org
 
 RUN apt-get update -qq
