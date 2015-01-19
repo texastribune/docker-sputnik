@@ -7,7 +7,7 @@ run: clean
 	docker run --detach -p 5111:5111 -p 1957:1957 -p 554:554 --name $(NAME) \
 	  texastribune/sputnik
 
-# just like `run`, but makes a one-time ephemeral container
+# just like `run`, but makes a one-time ephemeral container at localhost:8000
 test: clean
 	@echo Open http://localhost:8000/ in your web browser
 	docker run --rm -p 8000:1957 --name $(NAME) texastribune/sputnik

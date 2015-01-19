@@ -8,8 +8,8 @@ FROM ubuntu:14.04
 MAINTAINER tech@texastribune.org
 
 RUN apt-get update -qq
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -yq wget libc6-i386 lib32stdc++6 lib32z1
-RUN wget http://update.teradek.com/download.php?file=Sputnik/Software/Releases/2.1.x/2.1.1/teradek-sputnik_2.1.1.r22371_amd64.deb -q -O /tmp/teradek-sputnik.deb
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -yq libc6-i386 lib32stdc++6 lib32z1
+ADD http://update.teradek.com/download.php?file=Sputnik/Software/Releases/2.1.x/2.1.1/teradek-sputnik_2.1.1.r22371_amd64.deb /tmp/teradek-sputnik.deb
 RUN DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/teradek-sputnik.deb
 
 # Create volume friendly data directory
